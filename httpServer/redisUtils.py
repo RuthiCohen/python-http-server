@@ -1,4 +1,3 @@
-# from MyRedis import MyRedis
 from datetime import datetime
 
 def lower_word(word):

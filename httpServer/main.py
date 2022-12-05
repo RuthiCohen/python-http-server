@@ -21,7 +21,12 @@ async def get_country_by_ip(ip:str):
         return {"country_name": myRedis.get_ip_record(ip)['country_name']}
 
     # find the ip data
-    res = requests.get(f"https://geolocation-db.com/json/67273a00-5c4b-11ed-9204-d161c2da74ce/{ip}&position=true").json()
+    res = requests.get(f"https://geolocation-db.com/json/67273a00-5c4b-11ed-9204-d161c2da74ce/{ip}&position=true")
+
+    if res.status_code != 200:
+        return {'error': 'request failed ... please try again'}
+
+    res = res.json()
     if res["country_name"] == None:
         return {'error': 'ip does not exist....'}
 
