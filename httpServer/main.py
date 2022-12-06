@@ -50,6 +50,3 @@ async def get_ips_by_country(country_name: str, start_time: datetime = None , en
 
     ips = myRedis.get_ips_by_country(country_name, start_time, end_time)
     return {'country_name':country_name, 'country_ips': ips}
-
-# uvicorn main:app --reload
-# redis-server

