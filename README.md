@@ -4,8 +4,11 @@
 
 1. **First part:**
     In this part I've built a small http web server that supports 3 methods:
+
     a. get a country by given an ip.
+
     b. get all ips data by given a country.
+
     c. get the top 5 countries by the max number of ips associated to them.
     
     In order to run the server open the terminal & type:
